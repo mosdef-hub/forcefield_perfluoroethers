@@ -1,12 +1,12 @@
 <ForceField>
 	<AtomTypes>
 		<Type name="135" class="OS"  element="O" mass="15.99940"  def="O(C)(C)"/>
-		<Type name="136" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F){135}"/>
+		<Type name="136" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)([%135])"/>
 		<Type name="137" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)C"/>
-		<Type name="138" class="CF"  element="C" mass="12.01100"  def="C(F)(F){135}{135}"/>
-		<Type name="139" class="CF"  element="C" mass="12.01100"  def="C(F)(F){135}"/>
+		<Type name="138" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%135])([%135])"/>
+		<Type name="139" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%135])"/>
 		<Type name="140" class="CF"  element="C" mass="12.01100"  def="C(F)(F)C"/>
-		<Type name="141" class="CF"  element="C" mass="12.01100"  def="C(F){135}"/>
+		<Type name="141" class="CF"  element="C" mass="12.01100"  def="C(F)([%135])"/>
 		<Type name="142" class="F"   element="F" mass="18.99840"  def="F(C)"/>
 	</AtomTypes>
 	<NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
