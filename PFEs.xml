@@ -1,23 +1,24 @@
 <ForceField>
 	<AtomTypes>
-		<Type name="135" class="OS"  element="O" mass="15.99940"  def="O(C)(C)"/>
-		<Type name="136" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)([%135])"/>
-		<Type name="137" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)C"/>
-		<Type name="138" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%135])([%135])"/>
-		<Type name="139" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%135])"/>
-		<Type name="140" class="CF"  element="C" mass="12.01100"  def="C(F)(F)C"/>
-		<Type name="141" class="CF"  element="C" mass="12.01100"  def="C(F)([%135])"/>
-		<Type name="142" class="F"   element="F" mass="18.99840"  def="F(C)"/>
+		<Type name="pfpe_180" class="OS"  element="O" mass="15.99940"  def="[O;D2]([C;D4](F)(*)(*))([C;D4])"/>
+		<Type name="opls_180" class="OS"  element="O" mass="15.99940"  def="O(C)(C)"/>
+		<Type name="pfpe_181" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)([%pfpe_180])"/>
+		<Type name="pfpe_961" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)C"/>
+		<Type name="pfpe_189" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%pfpe_180])([%pfpe_180])"/>
+		<Type name="pfpe_139" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%pfpe_180])"/>
+		<Type name="pfpe_140" class="CF"  element="C" mass="12.01100"  def="C(F)(F)C"/>
+		<Type name="pfpe_141" class="CF"  element="C" mass="12.01100"  def="C(F)([%pfpe_180])"/>
+		<Type name="pfpe_965" class="F"   element="F" mass="18.99840"  def="F(C)"/>
 	</AtomTypes>
 	<NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
-		<Atom type="135" charge="-0.400" sigma="0.27900" epsilon="0.635968"/>
-		<Atom type="136" charge="0.560"  sigma="0.35000" epsilon="0.276144"/>
-		<Atom type="137" charge="0.360"  sigma="0.35000" epsilon="0.276144"/>
-		<Atom type="138" charge="0.640"  sigma="0.35000" epsilon="0.276144"/>
-		<Atom type="139" charge="0.440"  sigma="0.35000" epsilon="0.276144"/>
-		<Atom type="140" charge="0.240"  sigma="0.35000" epsilon="0.276144"/>
-		<Atom type="141" charge="0.320"  sigma="0.35000" epsilon="0.276144"/>
-		<Atom type="142" charge="-0.120" sigma="0.29500" epsilon="0.221752"/>
+		<Atom type="pfpe_180" charge="-0.400" sigma="0.27900" epsilon="0.635968"/>
+		<Atom type="pfpe_181" charge="0.560"  sigma="0.35000" epsilon="0.276144"/>
+		<Atom type="pfpe_961" charge="0.360"  sigma="0.35000" epsilon="0.276144"/>
+		<Atom type="pfpe_189" charge="0.640"  sigma="0.35000" epsilon="0.276144"/>
+		<Atom type="pfpe_139" charge="0.440"  sigma="0.35000" epsilon="0.276144"/>
+		<Atom type="pfpe_140" charge="0.240"  sigma="0.35000" epsilon="0.276144"/>
+		<Atom type="pfpe_141" charge="0.320"  sigma="0.35000" epsilon="0.276144"/>
+		<Atom type="pfpe_965" charge="-0.120" sigma="0.29500" epsilon="0.221752"/>
 	</NonbondedForce>
 	<HarmonicBondForce>
 		<Bond class1="CF" class2="OS" length="0.13600" k="267776.0"/>
