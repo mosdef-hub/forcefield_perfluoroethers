@@ -9,6 +9,12 @@
 		<Type name="pfpe_140" class="CF"  element="C" mass="12.01100"  def="C(F)(F)C"/>
 		<Type name="pfpe_141" class="CF"  element="C" mass="12.01100"  def="C(F)([%pfpe_180])"/>
 		<Type name="pfpe_965" class="F"   element="F" mass="18.99840"  def="F(C)"/>
+		<Type name="pfpe_161" class="CF"  element="C" mass="12.01100"  def=""/>
+        	<Type name="opls_164" class="F"   element="F" mass="18.99840"  def=""/>
+        	<Type name="opls_160" class="CH"  element="C" mass="12.01100"  def=""/>
+        	<Type name="opls_165" class="H"   element="H" mass="1.00800"   def=""/>
+        	<Type name="opls_162" class="OH"  element="O" mass="15.99940"  def=""/>
+        	<Type name="opls_163" class="H"   element="H" mass="1.00800"   def=""/>
 	</AtomTypes>
 	<NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
 		<Atom type="pfpe_180" charge="-0.400" sigma="0.27900" epsilon="0.635968"/>
@@ -19,20 +25,35 @@
 		<Atom type="pfpe_140" charge="0.240"  sigma="0.35000" epsilon="0.276144"/>
 		<Atom type="pfpe_141" charge="0.320"  sigma="0.35000" epsilon="0.276144"/>
 		<Atom type="pfpe_965" charge="-0.120" sigma="0.29500" epsilon="0.221752"/>
+		<Atom type="pfpe_161" charge="0.526"  sigma="0.32500" epsilon="0.259408"/>
+        	<Atom type="opls_164" charge="-0.206" sigma="0.29400" epsilon="0.255224"/>
+        	<Atom type="opls_160" charge="0.126"  sigma="0.35000" epsilon="0.276144"/>
+        	<Atom type="opls_165" charge="0.083"  sigma="0.25000" epsilon="0.125520"/>
+        	<Atom type="opls_162" charge="-0.635" sigma="0.30700" epsilon="0.711280"/>
+        	<Atom type="opls_163" charge="0.429"  sigma="0.00000" epsilon="0.000000"/>
 	</NonbondedForce>
 	<HarmonicBondForce>
 		<Bond class1="CF" class2="OS" length="0.13600" k="267776.0"/>
-		<Bond class1="CF" class2="CF" length="0.15290" k="224262.4"/>
 		<Bond class1="CF" class2="F"  length="0.13320" k="307105.6"/>
+		<Bond class1="CF" class2="CF" length="0.15290" k="224262.4"/>
+        	<Bond class1="CH" class2="H"  length="0.10900" k="284512.0"/>
+        	<Bond class1="CH" class2="OH" length="0.14100" k="267776.0"/>
+        	<Bond class1="OH" class2="H"  length="0.09450" k="462750.4"/>
 	</HarmonicBondForce>
 	<HarmonicAngleForce>
 		<Angle class1="CF" class2="OS" class3="CF" angle="2.11883" k="502.080"/>
+		<Angle class1="OS" class2="CF" class3="F"  angle="1.93208" k="418.400"/>
 		<Angle class1="OS" class2="CF" class3="OS" angle="1.83260" k="774.877"/>
 		<Angle class1="OS" class2="CF" class3="CF" angle="1.88146" k="418.400"/>
-		<Angle class1="OS" class2="CF" class3="F"  angle="1.93208" k="418.400"/>
-		<Angle class1="CF" class2="CF" class3="CF" angle="1.96699" k="488.273"/>
-		<Angle class1="CF" class2="CF" class3="F"  angle="1.91114" k="418.400"/>
 		<Angle class1="F"  class2="CF" class3="F"  angle="1.90415" k="644.336"/>
+		<Angle class1="CF" class2="CF" class3="F"  angle="1.91114" k="418.400"/>
+		<Angle class1="CF" class2="CF" class3="CF" angle="1.96699" k="488.273"/>
+		<Angle class1="CH" class2="CF" class3="F"  angle="1.93208" k="418.400"/>
+        	<Angle class1="CF" class2="CH" class3="H"  angle="1.88146" k="313.800"/>
+        	<Angle class1="CF" class2="CH" class3="OH" angle="1.93208" k="418.400"/>
+        	<Angle class1="H"  class2="CH" class3="H"  angle="1.88146" k="276.144"/>
+        	<Angle class1="H"  class2="CH" class3="OH" angle="1.93208" k="292.880"/>
+        	<Angle class1="CH" class2="OH" class3="H"  angle="1.91114" k="460.240"/>
 	</HarmonicAngleForce>
 	<PeriodicTorsionForce>
 		<Periodic class1="F"  class2="CF" class3="OS" class4="CF"
@@ -41,24 +62,18 @@
 				periodicity3="2" phase3="0.00000"  k3="0.00000"
 				periodicity4="3" phase4="1.08210"  k4="3.63523"
 				periodicity5="4" phase5="1.44862"  k5="12.62547"/>
-		<Periodic class1="CF" class2="CF" class3="OS" class4="CF"
-				periodicity1="0" phase1="0.00000"  k1="0.00000"
-				periodicity2="1" phase2="-0.24435" k2="92.43661"
-				periodicity3="2" phase3="0.00000"  k3="0.00000"
-				periodicity4="3" phase4="-1.62316" k4="17.74497"
-				periodicity5="4" phase5="-1.48353" k5="-20.39374"/>
 		<Periodic class1="OS" class2="CF" class3="OS" class4="CF"
 				periodicity1="0" phase1="0.00000"  k1="-17.26808"
 				periodicity2="1" phase2="0.26180"  k2="16.18191"
 				periodicity3="2" phase3="0.62832"  k3="6.82348"
 				periodicity4="3" phase4="1.15192"  k4="7.47191"
 				periodicity5="4" phase5="1.51844"  k5="15.62435"/>
-		<Periodic class1="OS" class2="CF" class3="CF" class4="CF"
-				periodicity1="0" phase1="0.00000"  k1="3.99045"
-				periodicity2="1" phase2="0.00000"  k2="0.00000"
-				periodicity3="2" phase3="-0.22689" k3="-3.62259"
-				periodicity4="3" phase4="0.57596"  k4="3.62301"
-				periodicity5="4" phase5="0.00000"  k5="0.00000"/>
+		<Periodic class1="CF" class2="CF" class3="OS" class4="CF"
+				periodicity1="0" phase1="0.00000"  k1="0.00000"
+				periodicity2="1" phase2="-0.24435" k2="92.43661"
+				periodicity3="2" phase3="0.00000"  k3="0.00000"
+				periodicity4="3" phase4="-1.62316" k4="17.74497"
+				periodicity5="4" phase5="-1.48353" k5="-20.39374"/>
 		<Periodic class1="OS" class2="CF" class3="CF" class4="F"
 				periodicity1="0" phase1="0.00000"  k1="0.00000"
 				periodicity2="1" phase2="0.00000"  k2="0.00000"
@@ -71,17 +86,65 @@
 				periodicity3="2" phase3="0.00000"  k3="-4.01572"
 				periodicity4="3" phase4="0.00000"  k4="-1.51607"
 				periodicity5="4" phase5="0.00000"  k5="0.00000"/>
-		<Periodic class1="CF" class2="CF" class3="CF" class4="F"
-				periodicity1="0" phase1="0.00000"  k1="0.00000"
-				periodicity2="1" phase2="0.00000"  k2="0.62760"
-				periodicity3="2" phase3="3.14159"  k3="0.00000"
-				periodicity4="3" phase4="0.00000"  k4="0.83680"
-				periodicity5="4" phase5="3.14159"  k5="0.00000"/>
+		<Periodic class1="OS" class2="CF" class3="CF" class4="CF"
+				periodicity1="0" phase1="0.00000"  k1="3.99045"
+				periodicity2="1" phase2="0.00000"  k2="0.00000"
+				periodicity3="2" phase3="-0.22689" k3="-3.62259"
+				periodicity4="3" phase4="0.57596"  k4="3.62301"
+				periodicity5="4" phase5="0.00000"  k5="0.00000"/>
 		<Periodic class1="F"  class2="CF" class3="CF" class4="F"
 				periodicity1="0" phase1="0.00000"  k1="0.00000"
 				periodicity2="1" phase2="0.00000"  k2="-5.23000"
 				periodicity3="2" phase3="3.14159"  k3="0.00000"
 				periodicity4="3" phase4="0.00000"  k4="0.52300"
 				periodicity5="4" phase5="3.14159"  k5="0.00000"/>
+		<Periodic class1="CF" class2="CF" class3="CF" class4="F"
+				periodicity1="0" phase1="0.00000"  k1="0.00000"
+				periodicity2="1" phase2="0.00000"  k2="0.62760"
+				periodicity3="2" phase3="3.14159"  k3="0.00000"
+				periodicity4="3" phase4="0.00000"  k4="0.83680"
+				periodicity5="4" phase5="3.14159"  k5="0.00000"/>
+		<Periodic class1="CH" class2="CF" class3="OS" class4="CF"
+                		periodicity1="0" phase1="0.00000"  k1="4.64621"
+                		periodicity2="1" phase2="0.22689"  k2="32.67532"
+                		periodicity3="2" phase3="0.00000"  k3="0.00000"
+                		periodicity4="3" phase4="1.08210"  k4="9.25999"
+				periodicity5="4" phase5="-1.67552" k5="-15.34972"/>
+		<Periodic class1="OS" class2="CF" class3="CH" class4="H"
+                		periodicity1="0" phase1="0.00000"  k1="0.00000"
+                		periodicity2="1" phase2="0.00000"  k2="0.00000"
+                		periodicity3="2" phase3="0.24435"  k3="2.51701"
+                		periodicity4="3" phase4="0.19199"  k4="3.59213"
+                		periodicity5="4" phase5="0.00000"  k5="0.00000"/>
+		<Periodic class1="OS" class2="CF" class3="CH" class4="OH"
+                		periodicity1="0" phase1="0.00000"  k1="4.73135"
+                		periodicity2="1" phase2="0.00000"  k2="0.00000"
+                		periodicity3="2" phase3="0.00000"  k3="-4.02168"
+                		periodicity4="3" phase4="0.00000"  k4="0.00000"
+                		periodicity5="4" phase5="0.00000"  k5="0.00000"/>
+        	<Periodic class1="F"  class2="CF" class3="CH" class4="H"
+                		periodicity1="0" phase1="0.00000"  k1="0.00000"
+                		periodicity2="1" phase2="0.00000"  k2="0.00000"
+                		periodicity3="2" phase3="3.14159"  k3="0.00000"
+                		periodicity4="3" phase4="0.00000"  k4="0.65689"
+                		periodicity5="4" phase5="3.14159"  k5="0.00000"/>
+        	<Periodic class1="F"  class2="CF" class3="CH" class4="OH"
+                		periodicity1="0" phase1="0.00000"  k1="0.00000"
+                		periodicity2="1" phase2="0.00000"  k2="0.00000"
+                		periodicity3="2" phase3="3.14159"  k3="0.00000"
+                		periodicity4="3" phase4="0.00000"  k4="1.12968"
+                		periodicity5="4" phase5="3.14159"  k5="0.00000"/>
+		<Periodic class1="CF" class2="CH" class3="OH" class4="H"
+                		periodicity1="0" phase1="0.00000"  k1="0.00000"
+                		periodicity2="1" phase2="0.00000"  k2="9.36798"
+                		periodicity3="2" phase3="3.14159"  k3="-4.55010"
+                		periodicity4="3" phase4="0.00000"  k4="0.00000"
+                		periodicity5="4" phase5="3.14159"  k5="0.00000"/>
+        	<Periodic class1="H"  class2="CH" class3="OH" class4="H"
+                		periodicity1="0" phase1="0.00000"  k1="0.00000"
+                		periodicity2="1" phase2="0.00000"  k2="0.00000"
+                		periodicity3="2" phase3="3.14159"  k3="0.00000"
+                		periodicity4="3" phase4="0.00000"  k4="0.99579"
+                		periodicity5="4" phase5="3.14159"  k5="0.00000"/>
 	</PeriodicTorsionForce>
 </ForceField>
