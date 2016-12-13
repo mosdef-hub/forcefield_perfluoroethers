@@ -1,6 +1,6 @@
 <ForceField>
 	<AtomTypes>
-		<Type name="pfpe_180" class="OS"  element="O" mass="15.99940"  def="[O;D2]([C;D4](F)(*)(*))([C;D4])"/>
+		<Type name="pfpe_180" class="OS"  element="O" mass="15.99940"  def="[O;X2]([C;X4](F)(*)(*))[C;X4]"/>
 		<Type name="opls_180" class="OS"  element="O" mass="15.99940"  def="O(C)(C)"/>
 		<Type name="pfpe_181" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)([%pfpe_180])"/>
 		<Type name="pfpe_961" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(F)C"/>
@@ -9,12 +9,12 @@
 		<Type name="pfpe_140" class="CF"  element="C" mass="12.01100"  def="C(F)(F)C"/>
 		<Type name="pfpe_141" class="CF"  element="C" mass="12.01100"  def="C(F)([%pfpe_180])"/>
 		<Type name="pfpe_965" class="F"   element="F" mass="18.99840"  def="F(C)"/>
-		<Type name="pfpe_161" class="CF"  element="C" mass="12.01100"  def=""/>
-        	<Type name="opls_164" class="F"   element="F" mass="18.99840"  def=""/>
-        	<Type name="opls_160" class="CH"  element="C" mass="12.01100"  def=""/>
-        	<Type name="opls_165" class="H"   element="H" mass="1.00800"   def=""/>
-        	<Type name="opls_162" class="OH"  element="O" mass="15.99940"  def=""/>
-        	<Type name="opls_163" class="H"   element="H" mass="1.00800"   def=""/>
+		<Type name="pfpe_161" class="CF"  element="C" mass="12.01100"  def="C"/>
+        	<Type name="opls_164" class="F"   element="F" mass="18.99840"  def="F"/>
+        	<Type name="opls_160" class="CH"  element="C" mass="12.01100"  def="C"/>
+        	<Type name="opls_165" class="H"   element="H" mass="1.00800"   def="H"/>
+        	<Type name="opls_162" class="OH"  element="O" mass="15.99940"  def="O"/>
+        	<Type name="opls_163" class="H"   element="H" mass="1.00800"   def="H"/>
 	</AtomTypes>
 	<NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
 		<Atom type="pfpe_180" charge="-0.400" sigma="0.27900" epsilon="0.635968"/>
