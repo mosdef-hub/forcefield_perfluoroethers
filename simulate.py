@@ -23,11 +23,11 @@ print("Atoms: ", len(zdol.atoms))
 for atom in zdol.atoms:
     print('Atom {} is typed as {}'.format(atom, atom.type))
 
-print("Bonds: ", len(zdol.atoms))
+print("Bonds: ", len(zdol.bonds))
 for bond in zdol.bonds:
     print('{} '.format(bond))
 
-print("Angles: ", len(zdol.atoms))
+print("Angles: ", len(zdol.angles))
 for angle in zdol.angles:
     print('{} '.format(angle))
 
