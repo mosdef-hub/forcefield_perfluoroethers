@@ -20,7 +20,6 @@ install:
 
   # INSTALL FROM CONDA ONCE NEXT FOYER VERSION IS RELEASED
   - pip install git+https://github.com/mosdef-hub/foyer.git
-  - pip install -e .
 
 script:
   - py.test -v --pyargs foyer
