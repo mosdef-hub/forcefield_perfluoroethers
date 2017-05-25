@@ -8,9 +8,10 @@
         <Type name="pfpe_139" class="CF"  element="C" mass="12.01100"  def="C(F)(F)([%pfpe_180])C" overrides="pfpe_140"/>
         <Type name="pfpe_140" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(C)C"/>
         <Type name="pfpe_141" class="CF"  element="C" mass="12.01100"  def="C(F)(C)(C)[%pfpe_180]"/>
-        <Type name="pfpe_965" class="F"   element="F" mass="18.99840"  def="FCO"/>
+        <Type name="pfpe_965" class="F"   element="F" mass="18.99840"  def="FCO" overrides="opls_965"/>
+        <Type name="opls_965" class="F"   element="F" mass="18.99840"  def="FC"/>
         <Type name="pfpe_161" class="CF"  element="C" mass="12.01100"  def="C(F)(F)(O)COH" overrides="pfpe_139"/>
-        <Type name="opls_164" class="F"   element="F" mass="18.99840"  def="FCCOH" overrides="pfpe_965"/>
+        <Type name="opls_164" class="F"   element="F" mass="18.99840"  def="FCCOH" overrides="pfpe_965, opls_965"/>
         <Type name="opls_160" class="CT"  element="C" mass="12.01100"  def="COH"/>
         <Type name="opls_165" class="H"   element="H" mass="1.00800"   def="HC(CF)OH"/>
         <Type name="opls_162" class="OH"  element="O" mass="15.99940"  def="O(H)CCF"/>
@@ -25,6 +26,7 @@
         <Atom type="pfpe_140" charge="0.240"  sigma="0.35000" epsilon="0.276144"/>
         <Atom type="pfpe_141" charge="0.320"  sigma="0.35000" epsilon="0.276144"/>
         <Atom type="pfpe_965" charge="-0.120" sigma="0.29500" epsilon="0.221752"/>
+        <Atom type="opls_965" charge="-0.120" sigma="0.29500" epsilon="0.221752"/>
         <Atom type="pfpe_161" charge="0.526"  sigma="0.32500" epsilon="0.259408"/>
         <Atom type="opls_164" charge="-0.206" sigma="0.29400" epsilon="0.255224"/>
         <Atom type="opls_160" charge="0.126"  sigma="0.35000" epsilon="0.276144"/>
