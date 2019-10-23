@@ -4,12 +4,10 @@ sudo: false
 
 matrix:
   include:
-    - { os: linux, env: PYTHON_VERSION=2.7 }
-    - { os: linux, env: PYTHON_VERSION=3.4 }
-    - { os: linux, env: PYTHON_VERSION=3.5 }
-    - { os: osx, env: PYTHON_VERSION=2.7 }
-    - { os: osx, env: PYTHON_VERSION=3.4 }
-    - { os: osx, env: PYTHON_VERSION=3.5 }
+    - { os: linux, env: PYTHON_VERSION=3.6 }
+    - { os: linux, env: PYTHON_VERSION=3.7 }
+    - { os: osx, env: PYTHON_VERSION=3.6 }
+    - { os: osx, env: PYTHON_VERSION=3.7 }
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install md5sha1sum; fi
@@ -17,9 +15,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda env create -q -n test-environment python=$PYTHON_VERSION -f environment.yml
   - source activate test-environment
-
-  # INSTALL FROM CONDA ONCE NEXT FOYER VERSION IS RELEASED
-  - pip install git+https://github.com/mosdef-hub/foyer.git
+  - conda install -c mosdef foyer
 
 script:
   - py.test -v --pyargs foyer
