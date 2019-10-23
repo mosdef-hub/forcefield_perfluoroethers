@@ -14,6 +14,6 @@ FORCEFIELD = Forcefield(forcefield_files=FORCEFIELD_FILES)
 @pytest.mark.parametrize('mol2_file', MOL2_FILES)
 def test_atomtyping(mol2_file):
     structure = pmd.load_file(mol2_file, structure=True)
-    atomtype(structure, FORCEFIELD)
+    atomtype(structure, FORCEFIELD, assert_dihedral_params=False)
 
 
