@@ -22,4 +22,4 @@ install:
   - conda install -c mosdef foyer
 
 script:
-  - py.test -v --pyargs foyer
+  - py.test -v
