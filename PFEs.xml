@@ -38,6 +38,7 @@
         <Bond class1="CF" class2="OS" length="0.13600" k="267776.0"/>
         <Bond class1="CF" class2="F"  length="0.13320" k="307105.6"/>
         <Bond class1="CF" class2="CF" length="0.15290" k="224262.4"/>
+        <Bond class1="CT" class2="CF" length="0.15290" k="224262.4"/>
         <Bond class1="CT" class2="H"  length="0.10900" k="284512.0"/>
         <Bond class1="CT" class2="OH" length="0.14100" k="267776.0"/>
         <Bond class1="OH" class2="H"  length="0.09450" k="462750.4"/>
@@ -47,6 +48,7 @@
         <Angle class1="OS" class2="CF" class3="F"  angle="1.93208" k="418.400"/>
         <Angle class1="OS" class2="CF" class3="OS" angle="1.83260" k="774.877"/>
         <Angle class1="OS" class2="CF" class3="CF" angle="1.88146" k="418.400"/>
+        <Angle class1="OS" class2="CF" class3="CT" angle="1.88146" k="418.400"/>
         <Angle class1="F"  class2="CF" class3="F"  angle="1.90415" k="644.336"/>
         <Angle class1="CF" class2="CF" class3="F"  angle="1.91114" k="418.400"/>
         <Angle class1="CF" class2="CF" class3="CF" angle="1.96699" k="488.273"/>
