@@ -9,9 +9,7 @@ setup(
     author_email="matt.thompson@vanderbilt.edu",
     license="MIT",
     entry_points={
-        "foyer.external_forcefields": [
-            "get_perfluoroether_path = perfluoroethers.perfluoroethers:get_perfluoroether_forcefield_path",
-            "get_perfluoroether = perfluoroethers.perfluoroethers:get_perfluoroether_forcefield",
+        "foyer.forcefields": [
             "PFE = perfluoroethers.perfluoroethers:PFE",
         ],
     },
