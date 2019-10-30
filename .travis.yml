@@ -4,22 +4,27 @@ sudo: false
 
 matrix:
   include:
-    - { os: linux, env: PYTHON_VERSION=2.7 }
-    - { os: linux, env: PYTHON_VERSION=3.4 }
-    - { os: linux, env: PYTHON_VERSION=3.5 }
-    - { os: osx, env: PYTHON_VERSION=2.7 }
-    - { os: osx, env: PYTHON_VERSION=3.4 }
-    - { os: osx, env: PYTHON_VERSION=3.5 }
+    - { os: linux, env: PYTHON_VERSION=3.6 }
+    - { os: linux, env: PYTHON_VERSION=3.7 }
+    - { os: osx, env: PYTHON_VERSION=3.6 }
+    - { os: osx, env: PYTHON_VERSION=3.7 }
 
 install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install md5sha1sum; fi
   - source devtools/travis-ci/install_conda.sh
   - conda config --set always_yes yes --set changeps1 no
-  - conda env create -q -n test-environment python=$PYTHON_VERSION -f environment.yml
+  - conda config --add channels omnia
+  - conda config --add channels conda-forge
+  - conda config --add channels mosdef
+  - conda config --set always_yes yes --set changeps1 no
+  - conda env create -q -n test-environment python=$PYTHON_VERSION --file requirements.txt
   - source activate test-environment
-
-  # INSTALL FROM CONDA ONCE NEXT FOYER VERSION IS RELEASED
-  - pip install git+https://github.com/mosdef-hub/foyer.git
+  - conda install -c mosdef --only-deps foyer
+  - git clone https://github.com/mosdef-hub/foyer.git
+  - cd foyer
+  - conda install --yes --file requirements-dev.txt
+  - pip install -e .
 
 script:
-  - py.test -v --pyargs foyer
+  - py.test -v

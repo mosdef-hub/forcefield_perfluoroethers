@@ -3,17 +3,19 @@ from glob import glob
 import parmed as pmd
 import pytest
 
-from foyer import Forcefield
+import foyer
 from foyer.tests.utils import atomtype
 
-MOL2_FILES = glob('test_molecules/*.mol2')
-FORCEFIELD_FILES = glob('*.xml')
+from perfluoroethers.perfluoroethers import PFE
 
-FORCEFIELD = Forcefield(forcefield_files=FORCEFIELD_FILES)
+
+MOL2_FILES = glob('test_molecules/*.mol2')
 
 @pytest.mark.parametrize('mol2_file', MOL2_FILES)
 def test_atomtyping(mol2_file):
     structure = pmd.load_file(mol2_file, structure=True)
-    atomtype(structure, FORCEFIELD)
-
-
+    foyer.tests.utils.atomtype(
+        structure,
+        PFE,
+        assert_dihedral_params=False
+    )
