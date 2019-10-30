@@ -19,7 +19,11 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda env create -q -n test-environment python=$PYTHON_VERSION --file requirements.txt
   - source activate test-environment
-  - conda install -c mosdef foyer
+  - conda install -c mosdef --only-deps foyer
+  - git clone https://github.com/mosdef-hub/foyer.git
+  - cd foyer
+  - conda install --yes --file requirements-dev.txt
+  - pip install -e .
 
 script:
   - py.test -v
