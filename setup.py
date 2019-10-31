@@ -10,7 +10,7 @@ setup(
     license="MIT",
     entry_points={
         "foyer.forcefields": [
-            "PFE = perfluoroethers.perfluoroethers:PFE",
+            "load_PFE = perfluoroethers.perfluoroethers:load_PFE",
         ],
     },
     packages=["perfluoroethers"],

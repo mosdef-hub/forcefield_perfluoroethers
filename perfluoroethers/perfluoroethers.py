@@ -2,8 +2,6 @@ import os
 import glob
 from pkg_resources import resource_filename
 
-from foyer import Forcefield
-
 
 def get_ff_path():
     return [resource_filename('perfluoroethers', 'xml')]
@@ -17,7 +15,8 @@ def get_perfluoroether_forcefield_path():
 
 
 def get_perfluoroether_forcefield():
+    from foyer import Forcefield
     return Forcefield(get_perfluoroether_forcefield_path())
 
 
-PFE = get_perfluoroether_forcefield()
+load_PFE = get_perfluoroether_forcefield
