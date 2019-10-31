@@ -20,4 +20,4 @@ def get_perfluoroether_forcefield():
     return Forcefield(get_perfluoroether_forcefield_path())
 
 
-PFE = get_perfluoroether_forcefield()
+load_PFE = get_perfluoroether_forcefield
