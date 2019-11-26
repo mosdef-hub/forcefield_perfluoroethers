@@ -6,25 +6,26 @@ matrix:
   include:
     - { os: linux, env: PYTHON_VERSION=3.6 }
     - { os: linux, env: PYTHON_VERSION=3.7 }
-    - { os: osx, env: PYTHON_VERSION=3.6 }
-    - { os: osx, env: PYTHON_VERSION=3.7 }
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "fa70a735182b"
+  - COMMIT_AUTHOR_EMAIL: "andrew.z.summers@gmail.com"
 
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install md5sha1sum; fi
   - source devtools/travis-ci/install_conda.sh
   - conda config --set always_yes yes --set changeps1 no
   - conda config --add channels omnia
   - conda config --add channels conda-forge
   - conda config --add channels mosdef
-  - conda config --set always_yes yes --set changeps1 no
-  - conda env create -q -n test-environment python=$PYTHON_VERSION --file requirements.txt
+  - conda create -n test-environment python=$PYTHON_VERSION --file requirements.txt
   - source activate test-environment
-  - conda install -c mosdef --only-deps foyer
-  - git clone https://github.com/mosdef-hub/foyer.git
-  - cd foyer
-  - conda install --yes --file requirements-dev.txt
+  - conda uninstall -y --force foyer
+  - pip install git+https://github.com/mosdef-hub/foyer
   - pip install -e .
 
 script:
   - py.test -v
+
+after_success:
+  - codecov
