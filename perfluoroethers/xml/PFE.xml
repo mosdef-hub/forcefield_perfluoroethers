@@ -19,6 +19,7 @@
     </AtomTypes>
     <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
         <Atom type="pfpe_180" charge="-0.400" sigma="0.27900" epsilon="0.635968"/>
+        <Atom type="opls_180" charge="-0.4" sigma="0.29" epsilon="0.58576"/>
         <Atom type="pfpe_181" charge="0.560"  sigma="0.35000" epsilon="0.276144"/>
         <Atom type="pfpe_961" charge="0.360"  sigma="0.35000" epsilon="0.276144"/>
         <Atom type="pfpe_189" charge="0.640"  sigma="0.35000" epsilon="0.276144"/>
